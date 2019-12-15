@@ -1,0 +1,32 @@
+student = input("Enter the student's name: ")
+#defining that you are going to put the scores in there
+testscores=[]
+#for test in range(0,3):
+n=0
+#while n<3:
+while n in range(0,3):
+    print("Enter Test Score # ", n+1)
+    score = int(input())
+#append means to add into the list(or array)
+    testscores.append(score)
+    n+=1
+
+
+print(student + "'s  scores are:")
+#for score in testscores:
+#    print(str(score) + '%')
+i=0
+#len means the length of the list for example in this list the length 3
+while i <len(testscores):
+    print(testscores[i])
+    i+=1
+
+#how you are getting the average so you are add all the test scores and then dividing it by the length
+avg = sum(testscores)/len(testscores)
+passing=70
+print(student + "'s average score is: \t" + str(avg) + "%")
+
+if avg >=passing:
+    print("Congratulations, you have passed the class")
+else:
+    print("I'm sorry, you must repeat this class :(")
